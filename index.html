@@ -25,17 +25,18 @@
     
     <div class="container">
         <div class="navbar">
-            <div class="logo"><h1>GariFie GH</h1></div>
+            <div class="logo"><a href="index.html"><h1>GariFie GH</h1></a></div>
             <nav>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Product</a></li>
-                    <li><a href="">About</a></li>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="screens/products.html">Product</a></li>
+                    <li><a href="screens/about.html">About Us</a></li>
                     <li><a href="">Contact</a></li>
                     <li><a href="">Account</a></li>
                 </ul>
             </nav>
-            <img src="images/cart.png" alt="" width="30px" height="30px" class="cart">
+            <img src="images/shopping-cart.svg" alt="" width="30px" height="30px" class="cart">
+            <img src="images/menu-1.svg" class="menu-icon" onclick="menutoggle()">
         </div>
 
         <!-- Big Heading -->
@@ -43,7 +44,7 @@
         <div class="row">
             <div class="col-2">
                 <h1><span class="big-heading">Eat Yummy </span><br>  and Healthy Gari! </h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Magni voluptatum error qui reiciendis earum inventore tempore dolores at corporis quia.</p>
+                <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Magni voluptatum error qui reiciendis earum inventore tempore dolores at corporis quia.</p>
                 <a href="" class="btn">Shop Now &#8594;</a>
             </div>
             <div class="col-2">
@@ -75,8 +76,9 @@
     <h2 class="title">Featured Products</h2>
     <div class="row">
         <div class="col-4">
+            <a href="screens/product-details.html">
             <img src="images/coconut-gari.jpg" alt="">
-            <h4>Coconut Gari</h4>
+            <h4>Coconut Gari</h4></a>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -134,7 +136,7 @@
                 <img src="images/big-image.png" class="offer-img">
             </div>
             <div class="col-2">
-                <p>Exclusive Offer on Gari Fie GH</p>
+                <p class="offer-p">Exclusive Offer on Gari Fie GH</p>
                 <h1>Chocoloate Gari</h1>
                 <small>Buy 5 Chocoloate gari and get 20% discount this christmas Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora perspiciatis facilis vitae ducimus deleniti non.</small><br>
                 <a href="" class="btn">Shop Now &#8594;</a>
@@ -235,5 +237,19 @@
         <p class="copyright">Copyright 2022 - Gari Fie GH</p>
     </div>
 </div>
+
+<!-- Toggle menu javascript -->
+<script>
+    var menuItems = document.getElementById("menuItems");
+    menuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(menuItems.style.maxHeight == "0px"){
+            menuItems.style.maxHeight = "200px";
+        }else{
+            menuItems.style.maxHeight="0px"
+        }
+    }
+</script>
 </body>
 </html>
